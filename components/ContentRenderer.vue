@@ -15,7 +15,3 @@ const parsedContent = computed(() => {
   return props.value.body;
 });
 </script>
-
-<style scoped>
-/* Styles moved to app.css */
-</style>

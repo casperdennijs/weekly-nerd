@@ -1,44 +1,45 @@
 <template>
-  <div>    <div class="hero-card">
-      <div class="hero-content">
-        <div class="profile-image-container">
-          <div class="profile-image"></div>
-        </div>
-        <div class="hero-text">
-          <h1>Welkom op mijn portfolio website!</h1>
-          <p class="tagline">Student CMD & Front-end Developer</p>
-          <div class="hero-buttons">
-            <NuxtLink to="/about" class="hero-btn primary">About Me</NuxtLink>
-            <NuxtLink to="/contact" class="hero-btn secondary">Contact</NuxtLink>
-          </div>
-        </div>
-      </div>
-    </div>
-      <h2>Featured Blogs</h2>
-    <div class="featured-blogs">
-      <BlogCard 
-        v-for="blog in featuredBlogs" 
-        :key="blog.id"
-        :id="blog.id"
-        :title="blog.title"
-        :excerpt="blog.excerpt"
-      />
-    </div>
-
-  </div>
+  <main>
+    <h1>Casper den Nijs</h1>
+    <p>Front-end Developer @ <a href="https://bluedesk.nl" target="_blank" tabindex="0">Bluedesk <i class="fa-solid fa-up-right-from-square"></i></a></p>
+  </main>
 </template>
 
-<script setup>
-const featuredBlogs = [
-  {
-    id: 1,
-    title: "The Rise of AI in Modern Development",
-    excerpt: "How artificial intelligence is changing the landscape of software development and what it means for developers."
-  },
-  {
-    id: 2,
-    title: "Understanding Web Components",
-    excerpt: "A deep dive into web components and how they're shaping the future of web development."
-  }
-]
+<script>
+
 </script>
+
+<style scoped>
+  main {
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  i {
+    font-size: 12px;
+    vertical-align: middle;
+  }
+</style>

@@ -99,7 +99,3 @@ async function submitBlog() {
   }
 }
 </script>
-
-<style scoped>
-/* Styles moved to app.css */
-</style>

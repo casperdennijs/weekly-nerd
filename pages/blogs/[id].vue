@@ -7,14 +7,12 @@
       <NuxtLink to="/blogs">Back to Blogs</NuxtLink>
     </div>
     <div v-else class="blog-post">
+      <NuxtLink to="/blogs" class="back-link" tabindex="0">Back to Blogs</NuxtLink>
       <h1>{{ blog.title }}</h1>
-      <div class="blog-meta">
-        <span>Posted: {{ formatDate(blog.created_at) }}</span>
-      </div>
       <div class="blog-content">
         <ContentRenderer :value="parsedContent" />
       </div>
-      <NuxtLink to="/blogs" class="back-link">Back to Blogs</NuxtLink>
+      <NuxtLink to="/blogs" class="back-link" tabindex="0">Back to Blogs</NuxtLink>
     </div>
   </div>
 </template>
@@ -59,6 +57,45 @@ function formatDate(dateString) {
 }
 </script>
 
-<style scoped>
-/* Styles moved to app.css */
+<style>
+
+  .blog-post {
+    max-width: 992px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 2rem 0;
+  }
+
+  .blog-post ul {
+    padding-left: 2rem;
+  }
+
+  .content-renderer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .blog-content {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .back-link {
+    display: block;
+    width: max-content;
+  }
+
+  .back-link:first-child {
+    margin-bottom: 1rem;
+  }
+
+  .back-link:last-child {
+    margin-top: 1rem;
+  }
 </style>

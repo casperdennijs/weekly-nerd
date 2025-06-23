@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>All Blogs</h1>
+  <main>
+    <h1>Blogs</h1>
     <div v-if="pending" class="loading">
       Loading blog posts...
     </div>
@@ -16,14 +16,32 @@
         :excerpt="blog.summary"
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
-// Fetch blogs from API
-const { data: blogs, error, pending } = await useFetch('/api/blogs')
+  const { data: blogs, error, pending } = await useFetch('/api/blogs')
 </script>
 
 <style scoped>
-/* Styles moved to app.css */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
 </style>

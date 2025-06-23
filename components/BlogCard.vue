@@ -1,8 +1,8 @@
 <template>
-  <div class="blog-card">
-    <h3 class="blog-title">{{ title }}</h3>
-    <p class="blog-excerpt">{{ excerpt }}</p>
-    <NuxtLink :to="`/blogs/${id}`" class="read-more">Read more</NuxtLink>
+  <div>
+    <h3>{{ title }}</h3>
+    <p>{{ excerpt }}</p>
+    <NuxtLink :to="`/blogs/${id}`" class="read-more" tabindex="0">Read more</NuxtLink>
   </div>
 </template>
 
@@ -18,10 +18,38 @@ defineProps({
   },
   excerpt: {
     type: String,
-    required: true  }
+    required: true  
+  }
 })
 </script>
 
 <style scoped>
-/* Styles moved to app.css */
+  div {
+    border: 1px solid #fff;
+    padding: 1rem;
+    color: #fff;
+    flex-grow: 1;
+    flex: 33.3%;
+    min-height: 200px;
+    border-radius: 10px;
+  }
+
+  a {
+    margin-top: auto;
+  }
+
+  p {
+    max-height: 75px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+  }
+
+  a {
+    color: #fff;
+  }
 </style>
