@@ -5,10 +5,6 @@
   </main>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
   main {
     background-color: #101010;
@@ -17,6 +13,7 @@
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    height: 100vh;
   }
 
   h1 {

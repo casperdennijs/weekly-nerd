@@ -20,10 +20,6 @@
     transition: unset;
   }
 
-  html, body, #__nuxt, main {
-    height: 100%;
-  }
-
   body {
     background-color: #101010;
   }
